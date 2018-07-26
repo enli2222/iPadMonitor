@@ -23,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D62432C2109D3EA00A91993 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		8DC92FBB2109686E008EB7A7 /* iPadMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPadMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC92FBE2109686E008EB7A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DC92FBF2109686E008EB7A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 				8DC92FC92109686F008EB7A7 /* LaunchScreen.storyboard */,
 				8DC92FCC2109686F008EB7A7 /* Info.plist */,
 				8DC92FCD2109686F008EB7A7 /* main.m */,
+				8D62432C2109D3EA00A91993 /* readme.md */,
 			);
 			path = iPadMonitor;
 			sourceTree = "<group>";
