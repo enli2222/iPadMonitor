@@ -32,7 +32,7 @@
     
     [self.view addSubview:btn];
     
-    [recorder start];
+    
 }
 
 -(IBAction)onBtnClick:(id)sender{
