@@ -22,22 +22,23 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    recorder = [[ELMonitorRecorder alloc] initWithID:0];
-    
     btn =[UIButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = [UIColor blueColor];
     btn.frame = CGRectMake(20, 100, 100, 20);
     [btn addTarget:self action:@selector(onBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [btn setTitle:@"测试" forState:UIControlStateNormal];
-    
     [self.view addSubview:btn];
     
-    
+    recorder = [[ELMonitorRecorder alloc] initWithID:0];
+    [recorder start];
 }
+
+
 
 -(IBAction)onBtnClick:(id)sender{
     
 }
+
 
 
 - (void)didReceiveMemoryWarning {

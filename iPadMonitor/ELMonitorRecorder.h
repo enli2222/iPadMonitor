@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ELMonitorRecorder : NSObject
+@interface ELMonitorRecorder : NSObject<CLLocationManagerDelegate>
 -(instancetype)initWithID:(NSInteger )ID;
 -(void)start;
 

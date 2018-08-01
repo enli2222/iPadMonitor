@@ -16,6 +16,9 @@
     UIDevice *device;
     dispatch_source_t timer;
     ELMonitorSender *sender;
+    CLLocationManager *manager;
+    CLLocation *newlocation;
+    CLLocationCoordinate2D coordinate;
 }
 @end
 
@@ -161,6 +164,45 @@
     //由于定时器默认是暂停的所以我们启动一下
     //启动定时器
     dispatch_resume(timer);
+    
+    [self initLocation];
+}
+
+-(void)initLocation{
+    manager = [[CLLocationManager alloc]init];
+    manager.delegate = self;
+    manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;//导航级别的精确度
+    
+    manager.allowsBackgroundLocationUpdates =YES; //允许后台刷新
+    manager.pausesLocationUpdatesAutomatically = NO; //不允许自动暂停刷新
+    manager.distanceFilter = kCLDistanceFilterNone; //不需要移动都可以刷新
+    
+    if([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
+        [manager requestWhenInUseAuthorization];
+    }
+    if(![CLLocationManager locationServicesEnabled]){
+        NSLog(@"请开启定位:设置 > 隐私 > 位置 > 定位服务");
+    }
+    if([manager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [manager requestAlwaysAuthorization]; // 永久授权
+        [manager requestWhenInUseAuthorization]; //使用中授权
+    }
+    
+    [manager startUpdatingLocation];
+}
+
+#pragma mark 定位成功
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    newlocation = [locations lastObject];
+    double lat = newlocation.coordinate.latitude;
+    double lon = newlocation.coordinate.longitude;
+    [UIApplication sharedApplication].applicationIconBadgeNumber ++;
+    NSLog(@"lat:%f,lon:%f",lat,lon);
+}
+
+#pragma mark 定位失败
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    NSLog(@"error:%@",error);
 }
 
 @end

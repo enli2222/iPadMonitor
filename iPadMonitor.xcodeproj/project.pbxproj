@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D7B21D12111A35C0000CCC2 /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7B21D02111A35C0000CCC2 /* UIViewController+Test.m */; };
 		8DC92FC02109686E008EB7A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC92FBF2109686E008EB7A7 /* AppDelegate.m */; };
 		8DC92FC32109686E008EB7A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC92FC22109686E008EB7A7 /* ViewController.m */; };
 		8DC92FC82109686F008EB7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC92FC72109686F008EB7A7 /* Assets.xcassets */; };
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		8D62432C2109D3EA00A91993 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		8D7B21CF2111A35B0000CCC2 /* UIViewController+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
+		8D7B21D02111A35C0000CCC2 /* UIViewController+Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
 		8DC92FBB2109686E008EB7A7 /* iPadMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPadMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC92FBE2109686E008EB7A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DC92FBF2109686E008EB7A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 		8DC92FBD2109686E008EB7A7 /* iPadMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				8D7B21CF2111A35B0000CCC2 /* UIViewController+Test.h */,
+				8D7B21D02111A35C0000CCC2 /* UIViewController+Test.m */,
 				8DC92FE821096E89008EB7A7 /* ELMonitorSender.h */,
 				8DC92FE921096E89008EB7A7 /* ELMonitorSender.m */,
 				8DC92FEB210976F6008EB7A7 /* ELMonitorRecorder.h */,
@@ -195,6 +200,7 @@
 				8DC92FE321096D12008EB7A7 /* AFHTTPSessionManager.m in Sources */,
 				8DC92FEA21096E89008EB7A7 /* ELMonitorSender.m in Sources */,
 				8DC92FE421096D12008EB7A7 /* AFURLSessionManager.m in Sources */,
+				8D7B21D12111A35C0000CCC2 /* UIViewController+Test.m in Sources */,
 				8DC92FE221096D12008EB7A7 /* AFURLResponseSerialization.m in Sources */,
 				8DC92FE521096D12008EB7A7 /* AFURLRequestSerialization.m in Sources */,
 				8DC92FE621096D12008EB7A7 /* AFNetworkReachabilityManager.m in Sources */,
